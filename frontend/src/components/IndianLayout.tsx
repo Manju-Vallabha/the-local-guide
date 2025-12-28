@@ -119,6 +119,17 @@ const IndianLayout: React.FC<IndianLayoutProps> = ({ children }) => {
         </div>
         <div className="footer-content">
           <p className="om-symbol">Discover the soul of India, one city at a time</p>
+          <p className="built-with">
+    Built with ❤️ using{" "}
+    <a
+      href="https://kiro.ai"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Kiro
+    </a>
+  </p>
+
         </div>
       </footer>
     </div>

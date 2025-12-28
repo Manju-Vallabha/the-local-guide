@@ -248,7 +248,7 @@ We welcome contributions that enhance cultural authenticity and user experience:
 
 ## 📄 License
 
-This project is for educational and demonstration purposes, showcasing the power of AI-assisted development with Kiro.
+This project is for demonstration purposes, showcasing the power of AI-assisted development with Kiro.
 
 ---
 

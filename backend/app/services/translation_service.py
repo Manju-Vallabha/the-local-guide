@@ -193,6 +193,10 @@ class TranslationService:
             translated_text = result['translatedText']
             detected_language = result.get('detectedSourceLanguage')
             
+            # Default to English if no language is detected
+            if not detected_language:
+                detected_language = 'en'
+            
             # Calculate confidence (Google Translate doesn't provide this directly)
             # We'll use a heuristic based on text length and language detection
             confidence = self._calculate_confidence(text, translated_text, detected_language)

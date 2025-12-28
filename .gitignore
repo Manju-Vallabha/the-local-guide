@@ -53,3 +53,7 @@ coverage/
 firebase-debug.log
 firebase-debug.*.log
 .firebaserc.local
+
+# Secrets
+backend/.secrets/
+*.json

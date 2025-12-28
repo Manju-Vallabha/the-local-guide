@@ -27,7 +27,7 @@ class SpeechToTextService:
     async def transcribe_audio(
         self, 
         audio_content: bytes, 
-        language_code: str = "hi-IN",
+        language_code: str = "en-US",
         sample_rate: int = 16000,
         encoding: speech.RecognitionConfig.AudioEncoding = speech.RecognitionConfig.AudioEncoding.LINEAR16
     ) -> dict:
@@ -36,7 +36,7 @@ class SpeechToTextService:
         
         Args:
             audio_content: Raw audio bytes
-            language_code: Language code (default: hi-IN for Hindi India)
+            language_code: Language code (default: en-US for English US)
             sample_rate: Audio sample rate in Hz (default: 16000)
             encoding: Audio encoding format (default: LINEAR16)
             
@@ -114,7 +114,7 @@ class SpeechToTextService:
             logger.error(f"Unexpected error in speech recognition: {e}")
             raise RuntimeError(f"Speech recognition failed: {e}")
     
-    async def transcribe_streaming(self, audio_stream, language_code: str = "hi-IN"):
+    async def transcribe_streaming(self, audio_stream, language_code: str = "en-US"):
         """
         Transcribe streaming audio (for future real-time implementation).
         
@@ -139,9 +139,10 @@ class SpeechToTextService:
     def get_supported_languages(self) -> list:
         """Get list of supported language codes."""
         return [
+            "en-US",  # English (US)
             "hi-IN",  # Hindi (India)
-            "en-IN",  # English (India)
             "te-IN",  # Telugu (India)
+            "en-IN",  # English (India)
             "en-US",  # English (US)
             "en-GB",  # English (UK)
         ]

@@ -175,7 +175,7 @@ export function useBatchTranslation() {
  */
 export function useSpeechToText() {
   return useMutation({
-    mutationFn: async ({ audio, language_code = 'hi-IN' }: SpeechToTextRequest): Promise<SpeechToTextResponse> => {
+    mutationFn: async ({ audio, language_code = 'en-US' }: SpeechToTextRequest): Promise<SpeechToTextResponse> => {
       const formData = new FormData();
       formData.append('audio', audio);
       formData.append('language_code', language_code);

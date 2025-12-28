@@ -72,7 +72,7 @@ async def translate_text(request: TranslationRequest):
 @router.post("/speech-to-text", response_model=SpeechToTextResponse)
 async def speech_to_text(
     audio: UploadFile = File(..., description="Audio file to transcribe"),
-    language_code: str = Form("hi-IN", description="Language code for recognition"),
+    language_code: str = Form("en-US", description="Language code for recognition"),
     sample_rate: int = Form(16000, description="Audio sample rate in Hz")
 ):
     """
@@ -174,7 +174,7 @@ async def speech_to_text(
 async def speech_to_translation(
     audio: UploadFile = File(..., description="Audio file to transcribe and translate"),
     target_language: str = Form(..., description="Target language for translation"),
-    source_language_code: str = Form("hi-IN", description="Source language code for speech recognition"),
+    source_language_code: str = Form("en-US", description="Source language code for speech recognition"),
     sample_rate: int = Form(16000, description="Audio sample rate in Hz"),
     use_slang_context: bool = Form(True, description="Use Varanasi slang context for translation")
 ):

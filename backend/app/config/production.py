@@ -57,13 +57,13 @@ class ProductionConfig(BaseSettings):
     enable_health_checks: bool = True
     
     # Google APIs
-    speech_to_text_language_code: str = "hi-IN"
+    speech_to_text_language_code: str = "en-US"
     speech_sample_rate: int = 16000
     speech_audio_format: str = "LINEAR16"
     
     # Translation
     supported_languages: List[str] = ["en", "hi", "te"]
-    default_source_language: str = "hi"
+    default_source_language: str = "en"
     default_target_language: str = "en"
     
     @validator("allowed_origins", pre=True)

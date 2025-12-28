@@ -33,7 +33,7 @@ class TranslationResponse(BaseModel):
 class SpeechToTextRequest(BaseModel):
     audio_format: str = Field("LINEAR16", description="Audio format")
     sample_rate: int = Field(16000, ge=8000, le=48000, description="Audio sample rate in Hz")
-    language_code: str = Field("hi-IN", description="Language code for speech recognition")
+    language_code: str = Field("en-US", description="Language code for speech recognition")
     
     @validator('audio_format')
     def validate_audio_format(cls, v):

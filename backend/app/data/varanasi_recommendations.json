@@ -1,0 +1,209 @@
+{
+  "street_food": [
+    {
+      "id": "sf001",
+      "name": "Kachori Sabzi",
+      "category": "street_food",
+      "description": "Deep-fried bread stuffed with spiced lentils, served with potato curry",
+      "location": "Vishwanath Gali, near Kashi Vishwanath Temple",
+      "cultural_insight": "A traditional breakfast dish that locals have been enjoying for generations. Best eaten hot with tangy tamarind chutney.",
+      "image_url": "/images/kachori-sabzi.jpg",
+      "rating": 4.8,
+      "tags": ["vegetarian", "breakfast", "traditional", "spicy"],
+      "price_range": "₹20-40",
+      "opening_hours": "6:00 AM - 11:00 AM"
+    },
+    {
+      "id": "sf002",
+      "name": "Banarasi Paan",
+      "category": "street_food",
+      "description": "Betel leaf preparation with areca nut, lime, and various sweet or savory fillings",
+      "location": "Godowlia Market, Dashashwamedh Ghat area",
+      "cultural_insight": "An integral part of Banarasi culture, paan is consumed after meals as a digestive and mouth freshener. Each paan wallah has their own secret recipe.",
+      "image_url": "/images/banarasi-paan.jpg",
+      "rating": 4.6,
+      "tags": ["traditional", "digestive", "cultural", "sweet"],
+      "price_range": "₹10-50",
+      "opening_hours": "10:00 AM - 11:00 PM"
+    },
+    {
+      "id": "sf003",
+      "name": "Malaiyo",
+      "category": "street_food",
+      "description": "A winter delicacy made from milk foam, flavored with cardamom and garnished with pistachios",
+      "location": "Thatheri Bazaar, Godowlia",
+      "cultural_insight": "Available only during winter months (December-February), this ethereal dessert is prepared in the early morning using dew and cold air.",
+      "image_url": "/images/malaiyo.jpg",
+      "rating": 4.9,
+      "tags": ["dessert", "winter", "traditional", "sweet", "seasonal"],
+      "price_range": "₹30-60",
+      "opening_hours": "6:00 AM - 10:00 AM (Winter only)"
+    },
+    {
+      "id": "sf004",
+      "name": "Chaat",
+      "category": "street_food",
+      "description": "Tangy and spicy street snack with various combinations of potatoes, chickpeas, chutneys, and crispy elements",
+      "location": "Dashashwamedh Ghat, Lanka Market",
+      "cultural_insight": "Varanasi's chaat has a unique tangy flavor profile that differs from other cities, with generous use of local spices and tamarind.",
+      "image_url": "/images/chaat.jpg",
+      "rating": 4.7,
+      "tags": ["vegetarian", "tangy", "spicy", "evening", "snack"],
+      "price_range": "₹25-80",
+      "opening_hours": "4:00 PM - 10:00 PM"
+    },
+    {
+      "id": "sf005",
+      "name": "Lassi",
+      "category": "street_food",
+      "description": "Thick yogurt-based drink served in traditional clay pots, available in sweet and salty varieties",
+      "location": "Blue Lassi Shop, Kachori Gali",
+      "cultural_insight": "Served in kulhads (clay pots) that add an earthy flavor. The Blue Lassi Shop has been serving travelers since 1945.",
+      "image_url": "/images/lassi.jpg",
+      "rating": 4.8,
+      "tags": ["drink", "traditional", "cooling", "vegetarian", "famous"],
+      "price_range": "₹40-120",
+      "opening_hours": "8:00 AM - 10:00 PM"
+    }
+  ],
+  "shops": [
+    {
+      "id": "sh001",
+      "name": "Mehrotra Silk Emporium",
+      "category": "shops",
+      "description": "Traditional Banarasi silk sarees and fabrics with intricate gold and silver thread work",
+      "location": "Thatheri Bazaar, Varanasi",
+      "cultural_insight": "Family-run business for over 100 years, specializing in authentic Banarasi silk weaving techniques passed down through generations.",
+      "image_url": "/images/silk-shop.jpg",
+      "rating": 4.7,
+      "tags": ["silk", "sarees", "traditional", "handwoven", "luxury"],
+      "price_range": "₹2000-50000",
+      "opening_hours": "10:00 AM - 8:00 PM"
+    },
+    {
+      "id": "sh002",
+      "name": "Vishwanath Book Store",
+      "category": "shops",
+      "description": "Ancient texts, spiritual books, and manuscripts related to Hindu philosophy and Varanasi's history",
+      "location": "Near Kashi Vishwanath Temple",
+      "cultural_insight": "One of the oldest bookstores in Varanasi, housing rare manuscripts and texts on spirituality, philosophy, and local history.",
+      "image_url": "/images/book-store.jpg",
+      "rating": 4.5,
+      "tags": ["books", "spiritual", "manuscripts", "history", "rare"],
+      "price_range": "₹50-5000",
+      "opening_hours": "9:00 AM - 7:00 PM"
+    },
+    {
+      "id": "sh003",
+      "name": "Brass Handicrafts Corner",
+      "category": "shops",
+      "description": "Traditional brass items including lamps, utensils, decorative pieces, and religious artifacts",
+      "location": "Copper Bazaar, Chowk",
+      "cultural_insight": "Varanasi has been a center for brass work for centuries. These artisans use traditional techniques to create both functional and decorative items.",
+      "image_url": "/images/brass-shop.jpg",
+      "rating": 4.6,
+      "tags": ["brass", "handicrafts", "traditional", "religious", "decorative"],
+      "price_range": "₹100-10000",
+      "opening_hours": "10:00 AM - 8:00 PM"
+    }
+  ],
+  "markets": [
+    {
+      "id": "mk001",
+      "name": "Vishwanath Gali Market",
+      "category": "markets",
+      "description": "Narrow lanes filled with shops selling religious items, sweets, and traditional goods leading to Kashi Vishwanath Temple",
+      "location": "Vishwanath Gali, Varanasi",
+      "cultural_insight": "This ancient market has been serving pilgrims for centuries. The narrow lanes are always bustling with devotees and vendors.",
+      "image_url": "/images/vishwanath-gali.jpg",
+      "rating": 4.4,
+      "tags": ["religious", "traditional", "pilgrimage", "crowded", "ancient"],
+      "price_range": "₹10-1000",
+      "opening_hours": "5:00 AM - 10:00 PM"
+    },
+    {
+      "id": "mk002",
+      "name": "Godowlia Market",
+      "category": "markets",
+      "description": "Main commercial hub with everything from clothes and electronics to street food and traditional items",
+      "location": "Godowlia Chowk, Varanasi",
+      "cultural_insight": "The heart of Varanasi's commercial activity, where locals and tourists alike come for shopping and street food.",
+      "image_url": "/images/godowlia-market.jpg",
+      "rating": 4.3,
+      "tags": ["commercial", "diverse", "busy", "central", "shopping"],
+      "price_range": "₹20-5000",
+      "opening_hours": "9:00 AM - 9:00 PM"
+    }
+  ],
+  "souvenirs": [
+    {
+      "id": "sv001",
+      "name": "Miniature Brass Ganga Aarti Set",
+      "category": "souvenirs",
+      "description": "Small brass replica of the evening aarti ceremony items including lamps, bells, and incense holders",
+      "location": "Dashashwamedh Ghat shops",
+      "cultural_insight": "Perfect memento of the famous Ganga Aarti ceremony. Each piece is handcrafted by local artisans.",
+      "image_url": "/images/aarti-set.jpg",
+      "rating": 4.5,
+      "tags": ["brass", "religious", "handcrafted", "ceremony", "miniature"],
+      "price_range": "₹200-800",
+      "opening_hours": "8:00 AM - 10:00 PM"
+    },
+    {
+      "id": "sv002",
+      "name": "Banarasi Silk Scarves",
+      "category": "souvenirs",
+      "description": "Lightweight silk scarves with traditional Banarasi patterns, perfect for gifts",
+      "location": "Thatheri Bazaar, Chowk Market",
+      "cultural_insight": "Made using the same techniques as traditional sarees but in a more accessible format for travelers.",
+      "image_url": "/images/silk-scarves.jpg",
+      "rating": 4.6,
+      "tags": ["silk", "traditional", "lightweight", "gifts", "patterns"],
+      "price_range": "₹300-1500",
+      "opening_hours": "10:00 AM - 8:00 PM"
+    }
+  ],
+  "clothing": [
+    {
+      "id": "cl001",
+      "name": "Traditional Kurta Collection",
+      "category": "clothing",
+      "description": "Handwoven cotton and silk kurtas in traditional Banarasi styles for men and women",
+      "location": "Thatheri Bazaar, Chowk",
+      "cultural_insight": "These kurtas represent the traditional dress of Varanasi, often worn during festivals and religious ceremonies.",
+      "image_url": "/images/kurta-collection.jpg",
+      "rating": 4.4,
+      "tags": ["traditional", "handwoven", "cotton", "silk", "festival"],
+      "price_range": "₹500-3000",
+      "opening_hours": "10:00 AM - 8:00 PM"
+    }
+  ],
+  "crafts": [
+    {
+      "id": "cr001",
+      "name": "Wooden Toys and Figurines",
+      "category": "crafts",
+      "description": "Hand-carved wooden toys and religious figurines made by local artisans",
+      "location": "Wooden Toy Market, Chowk",
+      "cultural_insight": "This craft has been practiced in Varanasi for generations, with each piece telling a story from Hindu mythology.",
+      "image_url": "/images/wooden-toys.jpg",
+      "rating": 4.7,
+      "tags": ["wooden", "handcarved", "toys", "religious", "mythology"],
+      "price_range": "₹50-2000",
+      "opening_hours": "9:00 AM - 7:00 PM"
+    },
+    {
+      "id": "cr002",
+      "name": "Stone Carving Workshop",
+      "category": "crafts",
+      "description": "Traditional stone carvings and sculptures, including miniature temple replicas",
+      "location": "Sarnath Road, near archaeological site",
+      "cultural_insight": "Inspired by the ancient Buddhist and Hindu sculptures found in Sarnath and Varanasi temples.",
+      "image_url": "/images/stone-carvings.jpg",
+      "rating": 4.8,
+      "tags": ["stone", "carving", "sculpture", "temple", "ancient"],
+      "price_range": "₹200-15000",
+      "opening_hours": "10:00 AM - 6:00 PM"
+    }
+  ]
+}

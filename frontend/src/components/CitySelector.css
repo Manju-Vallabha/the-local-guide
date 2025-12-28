@@ -1,0 +1,323 @@
+/* City Selector Styles */
+.city-selector {
+  position: relative;
+  z-index: 100;
+}
+
+.city-selector__trigger {
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  color: #1F2937;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  min-width: 200px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.city-selector__trigger:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.current-city {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.current-city__icon {
+  animation: aarti-wave 4s ease-in-out infinite;
+  color: #FF6B35;
+}
+
+.current-city__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.current-city__name {
+  font-weight: 700;
+  font-size: 1rem;
+  text-shadow: none;
+  color: #1F2937;
+}
+
+.current-city__desc {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  font-style: italic;
+  color: #374151;
+  text-shadow: none;
+}
+
+.dropdown-arrow {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.8;
+  color: #374151;
+}
+
+.dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.city-selector__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 99;
+  animation: fadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.city-selector__dropdown {
+  position: absolute;
+  top: calc(100% + 1rem);
+  right: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.95) 100%);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  min-width: 400px;
+  max-width: 500px;
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  animation: slideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 101;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.dropdown-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+.dropdown-header h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+  color: #1F2937;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-header p {
+  font-size: 0.875rem;
+  color: #6B7280;
+  margin: 0;
+  font-style: italic;
+}
+
+.city-grid {
+  display: grid;
+  gap: 0;
+  margin-bottom: 1.5rem;
+}
+
+.city-option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+  border: 2px solid rgba(0, 0, 0, 0.08);
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.city-option::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.city-option:hover {
+  border-color: var(--city-color);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.city-option:hover::before {
+  left: 100%;
+}
+
+.city-option.selected {
+  border-color: var(--city-color);
+  background: linear-gradient(135deg, var(--city-color) 0%, rgba(255, 255, 255, 0.9) 100%);
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.city-option.selected .city-option__desc {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.city-option__icon {
+  animation: aarti-wave 4s ease-in-out infinite;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  color: var(--city-color);
+}
+
+.city-option__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.city-option__name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #1F2937;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.city-option__desc {
+  font-size: 0.875rem;
+  color: #6B7280;
+  font-style: italic;
+}
+
+.city-option__indicator {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkmark {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  animation: checkmarkPop 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes checkmarkPop {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.dropdown-footer {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.dropdown-footer p {
+  font-size: 0.75rem;
+  color: #6B7280;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .city-selector__trigger {
+    min-width: 160px;
+    padding: 0.75rem 1rem;
+  }
+  
+  .current-city__name {
+    font-size: 0.875rem;
+  }
+  
+  .current-city__desc {
+    font-size: 0.7rem;
+  }
+  
+  .city-selector__dropdown {
+    min-width: 300px;
+    max-width: calc(100vw - 2rem);
+    padding: 1.5rem;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .city-option {
+    padding: 1rem;
+  }
+  
+  .city-option__icon {
+    /* Icon size controlled by Lucide React */
+  }
+  
+  .city-option__name {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .city-selector__trigger {
+    min-width: 140px;
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .current-city__icon {
+    /* Icon size controlled by Lucide React */
+  }
+  
+  .current-city__name {
+    font-size: 0.8rem;
+  }
+  
+  .current-city__desc {
+    display: none;
+  }
+  
+  .city-selector__dropdown {
+    min-width: 280px;
+    padding: 1rem;
+  }
+  
+  .dropdown-header h3 {
+    font-size: 1.25rem;
+  }
+  
+  .city-option {
+    padding: 0.75rem;
+  }
+}

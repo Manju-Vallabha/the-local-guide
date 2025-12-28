@@ -1,0 +1,178 @@
+/* Hindu/Indian Color Palette Themes */
+
+:root {
+  /* Varanasi Theme - Sacred Saffron & Ganges Blue */
+  --varanasi-primary: #FF6B35; /* Sacred Saffron */
+  --varanasi-secondary: #1E3A8A; /* Ganges Blue */
+  --varanasi-accent: #F59E0B; /* Temple Gold */
+  --varanasi-background: linear-gradient(135deg, #FFF7ED 0%, #FEF3C7 100%);
+  --varanasi-card: rgba(255, 255, 255, 0.95);
+  --varanasi-text: #1F2937;
+  --varanasi-text-light: #374151;
+  
+  /* Delhi Theme - Red Fort & Lotus */
+  --delhi-primary: #DC2626; /* Red Fort Red */
+  --delhi-secondary: #7C2D12; /* Deep Maroon */
+  --delhi-accent: #F59E0B; /* Lotus Gold */
+  --delhi-background: linear-gradient(135deg, #FEF2F2 0%, #FEE2E2 100%);
+  --delhi-card: rgba(255, 255, 255, 0.95);
+  --delhi-text: #1F2937;
+  --delhi-text-light: #374151;
+  
+  /* Mumbai Theme - Ocean & Sunset */
+  --mumbai-primary: #0EA5E9; /* Arabian Sea Blue */
+  --mumbai-secondary: #F97316; /* Sunset Orange */
+  --mumbai-accent: #EAB308; /* Golden Hour */
+  --mumbai-background: linear-gradient(135deg, #F0F9FF 0%, #FEF3C7 100%);
+  --mumbai-card: rgba(255, 255, 255, 0.95);
+  --mumbai-text: #1F2937;
+  --mumbai-text-light: #374151;
+  
+  /* Jaipur Theme - Pink City */
+  --jaipur-primary: #EC4899; /* Pink City Pink */
+  --jaipur-secondary: #BE185D; /* Deep Rose */
+  --jaipur-accent: #F59E0B; /* Royal Gold */
+  --jaipur-background: linear-gradient(135deg, #FDF2F8 0%, #FCE7F3 100%);
+  --jaipur-card: rgba(255, 255, 255, 0.95);
+  --jaipur-text: #1F2937;
+  --jaipur-text-light: #374151;
+  
+  /* Rishikesh Theme - Spiritual Green & Ganges */
+  --rishikesh-primary: #059669; /* Sacred Green */
+  --rishikesh-secondary: #1E40AF; /* River Blue */
+  --rishikesh-accent: #F59E0B; /* Temple Gold */
+  --rishikesh-background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
+  --rishikesh-card: rgba(255, 255, 255, 0.95);
+  --rishikesh-text: #1F2937;
+  --rishikesh-text-light: #374151;
+}
+
+/* Default theme (Varanasi) */
+.theme-varanasi {
+  --primary-color: var(--varanasi-primary);
+  --secondary-color: var(--varanasi-secondary);
+  --accent-color: var(--varanasi-accent);
+  --background-gradient: var(--varanasi-background);
+  --card-background: var(--varanasi-card);
+  --text-color: var(--varanasi-text);
+  --text-light: var(--varanasi-text-light);
+  --theme-name: "Varanasi";
+}
+
+.theme-delhi {
+  --primary-color: var(--delhi-primary);
+  --secondary-color: var(--delhi-secondary);
+  --accent-color: var(--delhi-accent);
+  --background-gradient: var(--delhi-background);
+  --card-background: var(--delhi-card);
+  --text-color: var(--delhi-text);
+  --text-light: var(--delhi-text-light);
+  --theme-name: "Delhi";
+}
+
+.theme-mumbai {
+  --primary-color: var(--mumbai-primary);
+  --secondary-color: var(--mumbai-secondary);
+  --accent-color: var(--mumbai-accent);
+  --background-gradient: var(--mumbai-background);
+  --card-background: var(--mumbai-card);
+  --text-color: var(--mumbai-text);
+  --text-light: var(--mumbai-text-light);
+  --theme-name: "Mumbai";
+}
+
+.theme-jaipur {
+  --primary-color: var(--jaipur-primary);
+  --secondary-color: var(--jaipur-secondary);
+  --accent-color: var(--jaipur-accent);
+  --background-gradient: var(--jaipur-background);
+  --card-background: var(--jaipur-card);
+  --text-color: var(--jaipur-text);
+  --text-light: var(--jaipur-text-light);
+  --theme-name: "Jaipur";
+}
+
+.theme-rishikesh {
+  --primary-color: var(--rishikesh-primary);
+  --secondary-color: var(--rishikesh-secondary);
+  --accent-color: var(--rishikesh-accent);
+  --background-gradient: var(--rishikesh-background);
+  --card-background: var(--rishikesh-card);
+  --text-color: var(--rishikesh-text);
+  --text-light: var(--rishikesh-text-light);
+  --theme-name: "Rishikesh";
+}
+
+/* Hindu/Indian Pattern Backgrounds */
+.pattern-mandala {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+}
+
+.pattern-paisley {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FF6B35' fill-opacity='0.05'%3E%3Cpath d='M30 30c0-16.569 13.431-30 30-30v30H30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.pattern-lotus {
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23F59E0B' fill-opacity='0.03'%3E%3Cpath d='M20 20c0-11.046 8.954-20 20-20s20 8.954 20 20-8.954 20-20 20-20-8.954-20-20z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Cultural Elements */
+.lotus-symbol::before {
+  content: "🪷";
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.temple-symbol::before {
+  content: "🛕";
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.diya-symbol::before {
+  content: "🪔";
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+/* Animations inspired by Indian culture */
+@keyframes puja-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(245, 158, 11, 0.6);
+  }
+}
+
+@keyframes aarti-wave {
+  0%, 100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes mandala-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.puja-glow {
+  animation: puja-glow 3s ease-in-out infinite;
+}
+
+.aarti-wave {
+  animation: aarti-wave 4s ease-in-out infinite;
+}
+
+.mandala-spin {
+  animation: mandala-spin 20s linear infinite;
+}

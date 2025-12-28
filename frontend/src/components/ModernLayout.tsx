@@ -68,14 +68,15 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({ children }) => {
   const [showCitySelector, setShowCitySelector] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [showOnboarding, setShowOnboarding] = useState(false);
+  const [onboardingDismissed, setOnboardingDismissed] = useState(false);
   const { isFirstTimeUser } = useUserPreferences();
 
-  // Show onboarding for first-time users
+  // Show onboarding for first-time users, but only if not manually dismissed
   useEffect(() => {
-    if (isFirstTimeUser) {
+    if (isFirstTimeUser && !onboardingDismissed) {
       setShowOnboarding(true);
     }
-  }, [isFirstTimeUser]);
+  }, [isFirstTimeUser, onboardingDismissed]);
 
   // Apply theme class to body
   useEffect(() => {
@@ -107,10 +108,12 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({ children }) => {
 
   const handleOnboardingComplete = () => {
     setShowOnboarding(false);
+    setOnboardingDismissed(true);
   };
 
   const handleOnboardingSkip = () => {
     setShowOnboarding(false);
+    setOnboardingDismissed(true);
   };
 
   return (

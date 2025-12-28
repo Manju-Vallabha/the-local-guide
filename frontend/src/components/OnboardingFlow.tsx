@@ -103,8 +103,16 @@ const OnboardingFlow: React.FC<OnboardingFlowProps> = ({
     }
   };
 
-  const skipOnboarding = () => {
-    onSkip?.();
+  const skipOnboarding = async () => {
+    // Save default preferences when skipping to mark user as no longer first-time
+    try {
+      await savePreferencesMutation.mutateAsync(DEFAULT_USER_PREFERENCES);
+      onSkip?.();
+    } catch (err) {
+      console.error('Error saving default preferences on skip:', err);
+      // Still call onSkip to close the modal even if save fails
+      onSkip?.();
+    }
   };
 
   /*
@@ -332,8 +340,9 @@ const OnboardingFlow: React.FC<OnboardingFlowProps> = ({
             <button 
               className="onboarding-skip"
               onClick={skipOnboarding}
+              disabled={savePreferencesMutation.isPending}
             >
-              Skip
+              {savePreferencesMutation.isPending ? 'Skipping...' : 'Skip'}
             </button>
           )}
         </div>
@@ -363,15 +372,6 @@ const OnboardingFlow: React.FC<OnboardingFlowProps> = ({
             disabled={currentStep === 0 || savePreferencesMutation.isPending}
           >
             Back
-          </button>
-
-          {/* Temporary skip button for testing */}
-          <button
-            className="onboarding-button"
-            onClick={() => onSkip?.()}
-            style={{ backgroundColor: '#ff4444', color: 'white' }}
-          >
-            Skip (Test)
           </button>
 
           {isLastStep ? (

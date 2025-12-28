@@ -25,6 +25,7 @@ const IndianApp: React.FC = () => {
   const [lastTranslation, setLastTranslation] = useState<TranslationResult | null>(null);
   const [showSettings, setShowSettings] = useState(false);
   const [showOnboarding, setShowOnboarding] = useState(false);
+  const [onboardingDismissed, setOnboardingDismissed] = useState(false);
   
   // Debug showOnboarding state changes
   React.useEffect(() => {
@@ -66,7 +67,7 @@ const IndianApp: React.FC = () => {
   // Show onboarding for first-time users
   React.useEffect(() => {
     console.log('IndianApp effect - isFirstTimeUser:', isFirstTimeUser, 'showOnboarding:', showOnboarding, 'preferences:', preferences);
-    if (isFirstTimeUser && !showOnboarding) {
+    if (isFirstTimeUser && !showOnboarding && !onboardingDismissed) {
       console.log('Setting showOnboarding to true');
       setShowOnboarding(true);
     } else if (preferences && !isFirstTimeUser) {
@@ -74,7 +75,7 @@ const IndianApp: React.FC = () => {
       // Set target language from preferences
       setTargetLanguage(preferences.preferredLanguage);
     }
-  }, [isFirstTimeUser, preferences?.preferredLanguage, showOnboarding]);
+  }, [isFirstTimeUser, preferences?.preferredLanguage, showOnboarding, onboardingDismissed]);
 
   const handleTranslation = useCallback((result: TranslationResult) => {
     setLastTranslation(result);
@@ -119,12 +120,14 @@ const IndianApp: React.FC = () => {
     console.log('handleOnboardingComplete called with:', newPreferences);
     // Force close onboarding immediately
     setShowOnboarding(false);
+    setOnboardingDismissed(true);
     clearError();
   }, [clearError]);
 
   const handleOnboardingSkip = useCallback(() => {
     console.log('handleOnboardingSkip called');
     setShowOnboarding(false);
+    setOnboardingDismissed(true);
   }, []);
 
   const handlePreferencesChange = useCallback((newPreferences: UserPreferences) => {
